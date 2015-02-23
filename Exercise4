@@ -1,0 +1,52 @@
+import java.util.Arrays;
+import java.util.Scanner;
+public class l6ex_16 {
+	static String toBinaryString(int x) {
+		return String.format("%32s", Integer.toBinaryString(x)).replace(' ','0');
+		}
+	
+		
+   public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+	System.out.print("Введите длину массива: ");
+	int n = sc.nextInt();
+	int[] a = new  int[n];
+	System.out.println("Введите массив из " + n + " элементов" );
+	String b[] = new String [a.length];
+	for(int i=0;i<a.length;i++){
+		a[i] = sc.nextInt();
+		b[i] = Integer.toBinaryString(a[i]);
+	}
+	System.out.println(Arrays.toString(a));
+    System.out.println(Arrays.toString(b)); 
+	System.out.println("В каком числе хотите поменять биты?");
+	int s = sc.nextInt();	
+	for (int i=0;i<a.length;i++){
+		String s1=Integer.toString(s);
+		String s2=Integer.toString(a[i]);
+		Boolean b2 = s1.equals(s2);
+		if (b2==true){ 
+			int n1=i;
+			System.out.println("На что заменить? "+ b[i]);
+			String s4 = new  String();
+		 	s4  = sc.next();
+		  
+		 	int k1=0;
+		 	int k2=0;
+		 	for(int j=s4.length();k2<s4.length();k2++,j--){
+		 		int pos =Integer.parseInt(s4.substring(j-1,j));
+		 		double  k3=Math.pow(2, k2);
+		 		int k4= (int) k3;
+		 		k1 = k1+pos*k4;
+			}
+		 	a[n1]=k1;
+		 	break;
+			}
+		
+	}
+	sc.close();
+	System.out.println(Arrays.toString(a));
+	
+   }
+   }
+	
