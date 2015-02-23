@@ -1,0 +1,43 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
+public class l6ex_13 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy"); 
+		sdf = new SimpleDateFormat("dd/MM/yyyy");
+		Date dt1=new Date(System.currentTimeMillis());
+		String res=sdf.format(dt1);
+		System.out.println("Enter the date dd/MM/yyyy:  ");
+		String dtStr=sc.nextLine();
+		try {
+			
+			Date dt =sdf.parse(dtStr);
+					}
+		catch (ParseException e) {
+			System.out.println("Wrong date!");
+		}
+				
+		String a1=dtStr.substring(3,5);
+		String a2=res.substring(3,5);
+		String a3=dtStr.substring(6,10);
+		String a4=res.substring(6,10);
+		boolean b=false;
+		boolean b1=a1.equals(a2);
+		boolean b2=a3.equals(a4);
+		if (b==b1)
+			if (b==b2){
+			System.out.println("Ваша дата отличается от текущей " + res+" годом " + a3+ " и месяцем "+ a1);
+		
+		}
+		sc.close();
+	}
+		
+		
+		
+	}
+
+
