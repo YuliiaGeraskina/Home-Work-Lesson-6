@@ -1,0 +1,33 @@
+
+
+import java.util.Scanner;
+public class l6ex_17 {
+static String inputbinary () {
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Введите число в бинарном формате: ");
+	String s4 = sc.next();
+	sc.close();
+	return s4;
+}
+    static void ouputbinarytoint(String a) {
+    	int k1=0;
+     	int k2=0;
+     	for(int j=a.length();k2<a.length();k2++,j--){
+     		int pos =Integer.parseInt(a.substring(j-1,j));
+     		double  k3=Math.pow(2, k2);
+     		int k4= (int) k3;
+     		k1 = k1+pos*k4;
+     	}
+     	System.out.println( a + "-> " + k1);
+         }
+ 	
+       
+	public static void main(String[] args) {
+	String s=inputbinary();
+	ouputbinarytoint(s);
+	
+	}
+		
+	}
+
+
