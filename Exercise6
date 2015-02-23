@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class l6ex_18 {
+	static String toBinaryString(long x) {
+		return String.format("%32s", Long.toBinaryString(x)).replace(' ','0');
+		}
+	
+static long inputlong () {
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Введите целое число: ");
+	long n = sc.nextInt();
+	sc.close();
+	return n;
+}
+
+    static void ouputlongtobinary(long a) {
+    	String b = new String();
+       	b = Long.toBinaryString(a);
+    	int count=0;
+	 	for(int j=1;j<b.length();j++){
+	 		int pos =Integer.parseInt(b.substring(j-1,j));
+	 		if (pos>=1)
+	 		count = count+1;
+		}
+	 	System.out.println( "Количество единиц в бинарном формате "+b + "-> " + count);
+	 	
+		}
+	 	   	
+	public static void main(String[] args) {
+	long a=inputlong();
+	ouputlongtobinary(a);
+	}
+		}
+
+
+ 
